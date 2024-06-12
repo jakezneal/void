@@ -6,6 +6,17 @@
     --background-colour: var(--brand-colour-primary);
     --text-colour: var(--brand-colour-secondary);
     --accent-colour: var(--brand-colour-tertiary);
+
+    --wrapper-gutter: 40px;
+    --section-spacing: 60px; // 180px at full size
+    // --element-spacing: 80px;
+
+    --wrapper-max-width: 720px;
+
+    // TODO: Add section spacing for other screen sizes.
+    @media (min-width: 992px) {
+        --section-spacing: 180px;
+    }
 }
 
 @font-face {
@@ -106,5 +117,25 @@ select {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
+    }
+}
+
+.wrapper {
+    padding: 0 var(--wrapper-gutter);
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+
+    // TODO: move media queries to a mixin.
+    @media (min-width: 768px) {
+        max-width: var(--wrapper-max-width);
+    }
+
+    @media (min-width: 992px) {
+        --wrapper-max-width: 960px;
+    }
+
+    @media (min-width: 1200px) {
+        --wrapper-max-width: 1360px;
     }
 }
