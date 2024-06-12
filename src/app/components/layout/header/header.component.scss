@@ -13,11 +13,22 @@
 
 .brand,
 .link {
-    color: var(--text-colour);
     text-decoration: none;
 }
 
+.link {
+    --opacity: 0.7;
+
+    color: rgba(#ffffff, var(--opacity));
+    transition: color 0.2s ease-in;
+
+    &:hover {
+        --opacity: 1;
+    }
+}
+
 .brand {
+    color: var(--text-colour);
     font-weight: 700;
     font-size: clamp(rem(24px), 6vw + 1rem, rem(48px));
 
