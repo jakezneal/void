@@ -18,6 +18,7 @@ import { gsap } from 'gsap';
     styles: [
         `
             .cursor {
+                display: none;
                 position: fixed;
                 left: 0;
                 border-radius: 50%;
@@ -28,6 +29,10 @@ import { gsap } from 'gsap';
                 width: 15px;
                 height: 15px;
                 z-index: 999;
+
+                @media (min-width: 992px) {
+                    display: block;
+                }
             }
         `,
     ],
