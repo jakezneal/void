@@ -1,6 +1,8 @@
 @import '../../../../assets/styles/functions';
 
 .hero {
+    margin-bottom: var(--section-spacing);
+
     @media (min-width: 992px) {
         display: flex;
         justify-content: space-between;
