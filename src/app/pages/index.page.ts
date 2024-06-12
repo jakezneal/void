@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { HeroComponent } from '../components/sections/hero/hero.component';
 import { MarqueeComponent } from '../components/ui/marquee/marquee.component';
 
