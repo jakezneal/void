@@ -7,8 +7,8 @@ import { MarqueeComponent } from '../components/ui/marquee/marquee.component';
     standalone: true,
     imports: [HeroComponent, MarqueeComponent],
     template: `
-        <h1>Hello</h1>
         <app-hero />
+        <app-marquee />
     `,
 })
 export default class HomeComponent {}
