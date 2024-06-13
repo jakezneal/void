@@ -68,5 +68,9 @@ export class LogosComponent {
             logo: '/images/logos/buyassociation.svg',
             name: 'BuyAssociation',
         },
+        {
+            logo: '/images/logos/encantar.svg',
+            name: 'Encantar',
+        },
     ] satisfies Client[];
 }
