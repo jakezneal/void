@@ -1,3 +1,5 @@
+@import './assets/styles/functions';
+
 :root {
     --brand-colour-primary: #0a0a0a;
     --brand-colour-secondary: #ffffff;
@@ -138,4 +140,11 @@ select {
     @media (min-width: 1200px) {
         --wrapper-max-width: 1360px;
     }
+}
+
+.section-heading {
+    text-transform: uppercase;
+    font-family: 'Anybody Italic';
+    font-size: clamp(rem(25px), 5.5vw + 1rem, rem(96px));
+    line-height: 1.2;
 }
