@@ -37,7 +37,7 @@ import { gsap } from 'gsap';
         `,
     ],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
     ngOnInit() {
         gsap.set('.cursor', {
             xPercent: -50,

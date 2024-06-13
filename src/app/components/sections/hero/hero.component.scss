@@ -69,6 +69,7 @@ span {
 
     a {
         color: var(--background-colour);
+        -webkit-text-stroke: 1px var(--text-colour);
         text-decoration: none;
     }
 }
