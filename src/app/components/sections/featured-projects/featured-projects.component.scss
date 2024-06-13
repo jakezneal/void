@@ -1,0 +1,74 @@
+@import '../../../../assets/styles/functions';
+
+.featured-projects {
+    margin-bottom: var(--section-spacing);
+}
+
+.list {
+    list-style-type: decimal-leading-zero;
+    padding-left: 10px;
+    margin: 0;
+
+    @media (min-width: 992px) {
+        padding-left: 40px;
+    }
+}
+
+.item {
+    --vertical-padding: 20px;
+
+    padding: var(--vertical-padding) 0;
+    position: relative;
+    border-bottom: 1px solid #ffffff;
+
+    @media (min-width: 992px) {
+        --vertical-padding: 30px;
+    }
+}
+
+.technologies,
+.item::marker {
+    color: #555555;
+    font-size: clamp(rem(16px), 1.5vw + 1rem, rem(28px));
+    font-weight: 300;
+}
+
+.article {
+    display: flex;
+    justify-content: space-between;
+
+    @media (min-width: 992px) {
+        align-items: center;
+    }
+}
+
+.meta {
+    @media (min-width: 992px) {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+.client {
+    font-size: clamp(rem(18px), 3vw + 1rem, rem(64px));
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.link {
+    svg {
+        width: clamp(rem(20px), 1.5vw + 1rem, rem(46px));
+        height: clamp(rem(20px), 1.5vw + 1rem, rem(46px));
+    }
+
+    &:before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        content: '';
+    }
+}
