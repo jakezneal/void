@@ -16,6 +16,9 @@ export default defineConfig(({ mode }) => ({
             vite: {
                 inlineStylesExtension: 'scss',
             },
+            prerender: {
+                routes: ['/', '/about', '/work', '/work/burylco'],
+            },
         }),
     ],
     test: {

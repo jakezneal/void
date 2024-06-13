@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 interface NavItem {
     link: string;
@@ -8,11 +9,11 @@ interface NavItem {
 @Component({
     selector: 'app-header',
     standalone: true,
-    imports: [],
+    imports: [RouterLink],
     template: `
         <header class="header wrapper">
             <!-- TODO: Fix gap between text and full stop -->
-            <a href="#" class="brand">
+            <a href="/" class="brand">
                 JZN
                 <span>.</span>
             </a>
@@ -20,7 +21,7 @@ interface NavItem {
                 <ul class="items" role="list">
                     @for (item of navItems; track $index) {
                         <li class="item">
-                            <a href="#" class="link">{{ item.label }}</a>
+                            <a [routerLink]="item.link" class="link">{{ item.label }}</a>
                         </li>
                     }
                 </ul>
@@ -32,19 +33,19 @@ interface NavItem {
 export class HeaderComponent {
     navItems = [
         {
-            link: '#',
+            link: '/',
             label: 'About',
         },
         {
-            link: '#',
+            link: '/work',
             label: 'Work',
         },
         {
-            link: '#',
+            link: '/',
             label: 'Services',
         },
         {
-            link: '#',
+            link: '/',
             label: 'Contact',
         },
     ] satisfies NavItem[];
