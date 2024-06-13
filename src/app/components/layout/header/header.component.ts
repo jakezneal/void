@@ -33,11 +33,11 @@ export class HeaderComponent {
     navItems = [
         {
             link: '#',
-            label: 'Work',
+            label: 'About',
         },
         {
             link: '#',
-            label: 'About',
+            label: 'Work',
         },
         {
             link: '#',
