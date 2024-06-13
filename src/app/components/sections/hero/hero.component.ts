@@ -24,7 +24,7 @@ import { Component } from '@angular/core';
                     </a>
                 </span>
             </h1>
-            <img src="https://via.placeholder.com/300x300" alt="Photo of Jake Neal" class="photo" width="300" height="300" />
+            <img src="/images/me.jpg" alt="Photo of Jake Neal" class="photo" width="300" height="300" />
         </section>
     `,
     styleUrl: './hero.component.scss',
