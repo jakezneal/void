@@ -19,7 +19,7 @@
 
     padding: var(--vertical-padding) 0;
     position: relative;
-    border-bottom: 1px solid #ffffff;
+    border-bottom: 1px solid var(--brand-colour-secondary);
 
     @media (min-width: 992px) {
         --vertical-padding: 30px;
