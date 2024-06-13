@@ -10,14 +10,15 @@
     --accent-colour: var(--brand-colour-tertiary);
 
     --wrapper-gutter: 40px;
-    --section-spacing: 60px; // 180px at full size
-    // --element-spacing: 80px;
+    --section-spacing: 60px;
+    --element-spacing: 30px;
 
     --wrapper-max-width: 720px;
 
     // TODO: Add section spacing for other screen sizes.
     @media (min-width: 992px) {
         --section-spacing: 180px;
+        --element-spacing: 80px;
     }
 }
 
@@ -147,4 +148,5 @@ select {
     font-family: 'Anybody Italic';
     font-size: clamp(rem(25px), 5.5vw + 1rem, rem(96px));
     line-height: 1.2;
+    margin-bottom: var(--element-spacing);
 }
