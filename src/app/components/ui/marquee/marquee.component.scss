@@ -21,6 +21,7 @@
     overflow: hidden;
     user-select: none;
     gap: var(--gap);
+    margin-bottom: var(--section-spacing);
 
     @media (min-width: 992px) {
         --vertical-padding: 20px;
