@@ -1,10 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-
-interface NavItem {
-    link: string;
-    label: string;
-}
+import { navItems } from '../../../models/links';
 
 @Component({
     selector: 'app-header',
@@ -19,7 +15,7 @@ interface NavItem {
             </a>
             <nav>
                 <ul class="items" role="list">
-                    @for (item of navItems; track $index) {
+                    @for (item of items; track $index) {
                         <li class="item">
                             <a [routerLink]="item.link" class="link">{{ item.label }}</a>
                         </li>
@@ -31,22 +27,5 @@ interface NavItem {
     styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-    navItems = [
-        {
-            link: '/',
-            label: 'About',
-        },
-        {
-            link: '/work',
-            label: 'Work',
-        },
-        {
-            link: '/',
-            label: 'Services',
-        },
-        {
-            link: '/',
-            label: 'Contact',
-        },
-    ] satisfies NavItem[];
+    items = navItems;
 }
