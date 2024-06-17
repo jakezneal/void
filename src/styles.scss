@@ -150,3 +150,7 @@ select {
     line-height: 1.2;
     margin-bottom: var(--element-spacing);
 }
+
+main {
+    margin-bottom: calc(var(--section-spacing) * 2);
+}
