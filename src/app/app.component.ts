@@ -46,7 +46,6 @@ export class AppComponent implements OnInit {
         });
 
         const cursor = document.querySelector('.cursor');
-        const links = document.querySelectorAll('a');
 
         let xTo = gsap.quickTo(cursor, 'x', {
             duration: 0.3,
@@ -62,23 +61,6 @@ export class AppComponent implements OnInit {
         window.addEventListener('mousemove', (e) => {
             xTo(e.clientX);
             yTo(e.clientY);
-        });
-
-        // Loop through each link and add a mouseenter/mouseleave event listener to scale up/down the cursor size.
-        links.forEach((link) => {
-            link.addEventListener('mouseenter', () => {
-                gsap.to(cursor, 1, {
-                    scale: 1.6,
-                    duration: 0.1,
-                });
-            });
-
-            link.addEventListener('mouseleave', () => {
-                gsap.to(cursor, 1, {
-                    scale: 1,
-                    duration: 0.1,
-                });
-            });
         });
     }
 }
