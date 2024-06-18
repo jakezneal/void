@@ -4,15 +4,15 @@
     margin-bottom: var(--section-spacing);
 }
 
-p {
+:host ::ng-deep p {
     font-size: clamp(rem(24px), 2.5vw + 1rem, rem(48px));
     line-height: 1.5;
+}
 
-    & + & {
-        margin-top: 40px;
-    }
+:host ::ng-deep p + p {
+    margin-top: 40px;
+}
 
-    &:last-of-type {
-        margin-bottom: 80px;
-    }
+:host ::ng-deep p:last-of-type {
+    margin-bottom: 80px;
 }
