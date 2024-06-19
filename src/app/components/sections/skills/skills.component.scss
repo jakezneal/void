@@ -1,0 +1,28 @@
+@import '../../../../assets/styles/functions';
+
+.skills {
+    --columns: 2;
+
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    gap: 40px;
+    margin-bottom: var(--section-spacing);
+
+    @media (min-width: 768px) {
+        --columns: 3;
+    }
+}
+
+.heading {
+    margin-bottom: 10px;
+}
+
+.heading,
+.item {
+    font-size: clamp(rem(18px), 1vw + 1rem, rem(28px));
+}
+
+.list {
+    padding-left: 0;
+    margin: 0;
+}
